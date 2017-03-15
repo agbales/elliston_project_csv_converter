@@ -1,7 +1,6 @@
 function handleFiles(files) {
       // Check for the various File API support.
       if (window.FileReader) {
-          // FileReader are supported.
           getAsText(files[0]);
       } else {
           alert('FileReader are not supported in this browser.');
@@ -22,23 +21,30 @@ function handleFiles(files) {
       processData(csv);
     }
 
-    function processData(csv) {
-        var allTextLines = csv.split(/\r\n|\n/);
-        var lines = [];
-        for (var i=0; i<allTextLines.length; i++) {
-            var data = allTextLines[i].split(';');
-                var tarr = [];
-                for (var j=0; j<data.length; j++) {
-                    tarr.push(data[j]);
-                }
-                lines.push(tarr);
-        }
-      console.log(lines);
-      document.getElementById('output').innerHTML = lines;
-    }
-
     function errorHandler(evt) {
       if(evt.target.error.name == "NotReadableError") {
           alert("Canno't read file !");
       }
+    }
+
+    var data;
+    var ellistonData = { 	totalRecords: 0,
+    						playlistID: {}
+    					};
+    var allTracks = [];
+    var authors = '';
+
+    // Array used for ONLY WP listing info:
+    var el = [];
+
+
+    function processData(csv) {
+            data = Papa.parse(csv, {
+        					header: true,
+        					dynamicTyping: true,
+        					complete: function(d) {
+        						data = d
+                    console.log(d)
+        					}
+                });
     }
