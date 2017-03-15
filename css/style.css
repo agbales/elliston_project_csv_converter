@@ -14,9 +14,12 @@ code {
     background-color: #F0F8FF;
 }
 
-nav {
-  height: 100px;
-  background-color: #FFF;
+#display-listings {
+    margin: 10px;
+}
+
+footer {
+	margin: 50px 0;
 }
 
 .jumbotron {
@@ -33,14 +36,11 @@ nav {
   border-top: 1px solid #fff;
 }
 
-footer {
-	margin: 50px 0;
-}
-
-#display-listings {
-    margin: 10px;
-}
-
 .listing-title h2 {
 	margin-bottom: 0px;
+}
+
+nav {
+  height: 100px;
+  background-color: #FFF;
 }
