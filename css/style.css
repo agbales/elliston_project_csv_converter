@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	padding-top: 50px;
+}
+
+code {
+    font-family: 'Anonymous Pro',;
+    color: #181818;
+    background-color: #F0F8FF;
+}
+
+footer {
+	margin: 50px 0;
+}
+
+#display-listings {
+    margin: 10px;
+}
+
+.listing-title h2 {
+	margin-bottom: 0px;
+}
