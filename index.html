@@ -14,23 +14,26 @@
 
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Elliston CSV -> WP Posts</a>
-          <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
-                     accept=".csv">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="./images/Elliston-Project-Icon.jpg">
+          </a>
         </div>
       </div>
     </nav>
 
     <div class="wrapper">
       <div class="container">
+
+        <div class="jumbotron">
+          <h4 class="display-3">CSV -> Wordpress Post HTML</h4>
+          <p class="lead"></p>
+          <hr class="my-4">
+          <p>Upload Elliston DB CSV file:</p>
+          <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
+                     accept=".csv">
+        </div>
 
         <div id="output">
           <!-- output -->

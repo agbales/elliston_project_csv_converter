@@ -14,6 +14,14 @@ code {
     background-color: #F0F8FF;
 }
 
+nav {
+  height: 100px;
+}
+
+.jumbotron {
+  margin-top: 100px;
+}
+
 footer {
 	margin: 50px 0;
 }
